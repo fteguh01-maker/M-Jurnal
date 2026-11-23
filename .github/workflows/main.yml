@@ -17,7 +17,10 @@ jobs:
         with:
           gradle-version: 8.7
       - name: Build APK
-        run: gradle assembleDebug --no-daemon
+        run: gradle assembleDebug --no-daemon 
+        Pandroid.useAndroidX=true 
+        Pandroid.enableJetifier=true
+        with:
         working-directory: m-jurnal
       - uses: actions/upload-artifact@v4
         with:
